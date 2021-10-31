@@ -9,7 +9,7 @@
     <div id="app">
       <h2>CSS3 Perspective Playground</h2>
       <main>
-        <section class="settings">
+        <section class="settings" v-cloak>
           <div class="settings-container">
             <label>Perspective: {{ perspective }}</label>
             <input v-model="perspective" type="range" min="0" max="999" />
@@ -29,10 +29,7 @@
         </section>
         <section class="output">
           <div class="box-container">
-            <div
-              :style="box"
-              class="box"
-            ></div>
+            <div :style="box" class="box"></div>
           </div>
         </section>
       </main>
@@ -50,6 +47,6 @@
 
     <script src="https://unpkg.com/css-doodle@0.6.1/css-doodle.min.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="app.js"></script>
+    <script src="app.js" refer></script>
   </body>
 </html>
